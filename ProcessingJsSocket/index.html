@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8"></meta>
+	<title>LiveProcessingJs</title>
+
+	<link	href="css/smoothness/jquery-ui-1.9.0.custom.css" rel="stylesheet">
+	<script	src="extLibs/jquery/jquery-ui-1.9.0.custom/js/jquery-1.8.2.js"></script>
+	<script	src="extLibs/jquery/jquery-ui-1.9.0.custom/js/jquery-ui-1.9.0.custom.js"></script>
+	<script	src="extLibs/processing/processing-1.4.1-examples/processing.js"></script>
+
+	<script	src="libs/log.js"></script>
+
+	<link	href="index.css" rel="stylesheet">
+	<script	src="index.js"></script>
+</head>
+<body>
+	<div id="canvasContainer"></div>
+	<script>
+	// du bist cool!
+	//sourceCode = "int num = 60;float mx[] = new float[num];float my[] = new float[num];void setup() {  size(200, 200);  smooth();  noStroke();  fill(255, 153); }void draw() {  background(51); for(int i=1; i<num; i++) {  mx[i-1] = mx[i];    my[i-1] = my[i];  }  mx[num-1] = mouseX;  my[num-1] = mouseY;for(int i=0; i<num; i++) {ellipse(mx[i], my[i], i/2, i/2);}}"
+/*
+	$("#canvas").html("void setup()	{size(200,200);		background(125);		fill(255);		noLoop();		PFont fontA = loadFont(\"courdfdfdier\");		textFont(fontA, 14);  	}	void draw(){  		text(\"Hello Web!\",20,20);		println(\"Hello ErrorLog!\");	}")
+	alert($("#canvas").html(""))
+*/
+	//var p = new Processing(canvas, sourceCode);
+	</script>
+</body>
+</html>

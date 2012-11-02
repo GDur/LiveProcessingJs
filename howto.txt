@@ -1,0 +1,11 @@
+- install latest version of python (recommended v2.7.3)
+- copy the unziped SubSocket folder into sublimes packages folder(start sublime and go to > preferences > browse packages)
+- restart sublime
+- start index.html with your browser
+- start example.js with sublime and make a change to start the connection (e.g. add a comment)
+
+Known Bugs:
+  - sublime can crash
+  - connection stops working
+    - solution: taskmanager kill python.exe, restart sublime and/or browser
+  - application in browser gets slower -  refresh index.html page
