@@ -1,12 +1,11 @@
 // All Examples Written by Casey Reas and Ben Fry
 // unless otherwise stated.
 
-
 int num = 50;
+
 
 float mx[] = new float[num];
 float my[] = new float[num];
-
 
 int vx = 0;
 int vy = 0;
@@ -24,10 +23,9 @@ void setup()
 	}
 }
 
-
 void draw()
 {
-	background(25,65,5); 
+	background(225,65,5); 
 	for(int i=1; i<num; i++) {
 		mx[i-1] = mx[i];
 		my[i-1] = my[i];
@@ -64,5 +62,4 @@ void draw()
 	for(int i=0; i<num; i++) {
 		ellipse(mx[i], my[i], i/4, i/4);
 	}
-
 }
