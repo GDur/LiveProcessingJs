@@ -13,7 +13,7 @@ SETUP SUBLIME
 
 EXAMPLE:
 - start ...\Packages\LiveProcessingJs\ProcessingJsSocket\index.html with your browser
-- start ...\Packages\LiveProcessingJs\example.pde with SubLime!
+- start on of the .pde files in ...\Packages\LiveProcessingJs\examples\.. with SubLime!
   - in sublime click through:  > View > Syntax > Open all .......(at the top) > Java > Java
 - change code in example.pde -> you should see the result of the code in your browser
 

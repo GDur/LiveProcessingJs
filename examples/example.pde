@@ -1,15 +1,14 @@
 // All Examples Written by Casey Reas and Ben Fry
 // unless otherwise stated.
 
-int num = 50;
-
+int num = 104;
 
 float mx[] = new float[num];
 float my[] = new float[num];
 
 int vx = 0;
 int vy = 0;
-int maxv = 4;
+int maxv = 40;
 
 void setup()
 {
