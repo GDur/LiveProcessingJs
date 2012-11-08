@@ -29,3 +29,5 @@ EXAMPLE:
 That's it! HF!
 
 byGDur
+
+Thanks to Maun for the python code for the Server and the Plugin!
