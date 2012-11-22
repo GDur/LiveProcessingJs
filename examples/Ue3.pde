@@ -1,6 +1,7 @@
 /* Gregor Altstädt
 * 30.10.12*/
 
+
 // Aufgabe 4. a
 class RectBorder
 {
@@ -11,7 +12,7 @@ class RectBorder
   v2 pos2;
   
   v2 dim2;
-
+  
   RectBorder(v2 pos, v2 dim, v2 pos2, v2 dim2)
   {
     this.pos = pos;

@@ -21,6 +21,7 @@ void draw() {
   triangle(30, 75, 58, 20, 86, 75);
   rect(100, 100, 30, 60);
 
+
   // println("4. Aufgabe");
   // Steht auf Bildschirm. Dient für Benutzer der Software.
   text("Mein erstes Programm", 100, 30, 110, 110);
