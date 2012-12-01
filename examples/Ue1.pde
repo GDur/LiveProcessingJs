@@ -4,13 +4,14 @@
 void setup() {
   // println("2. Aufgabe");
   smooth();
-  size(400, 400);
+  size(400, 900);
   noLoop();
 }
 
 void draw() {
   background(255);
   fill(200);
+
   stroke(1);
 
   // println("3. Aufgabe");
@@ -39,6 +40,7 @@ void draw() {
   println(1 / 5);
   println(1 / 8);
   println(1 / 13);
+
 
   println("6. Aufgabe");
   // Zeigt die aktuelle Mausposition im Fenster an.

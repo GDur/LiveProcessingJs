@@ -30,7 +30,7 @@ class WebSocketClient(WebSocketBaseClient):
         
 if __name__ == '__main__':
                 
-    ws = WebSocketClient('http://localhost:9000/ws', protocols=['http-only', 'chat'])
+    ws = WebSocketClient('http://localhost:9999/ws', protocols=['http-only', 'chat'])
     ws.connect()
     
     ws.send("Hello world")

@@ -69,7 +69,7 @@ class Connecter(threading.Thread):
 
 class JSRealtime(sublime_plugin.EventListener):
     def __init__(self):
-        self.serverExe = sublime.packages_path() + "\LiveProcessingJs\Server.py"   
+        self.serverExe = sublime.packages_path() + "\LiveProcessingJs\\nserver.js"   
         self.connecting = False
         self.connected = False
         self.connectingThread = None
