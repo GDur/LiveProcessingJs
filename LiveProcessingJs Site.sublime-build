@@ -1,4 +1,4 @@
 {
-	"target": "open_sub_socket",
-	"selector": "source.js"
+	"target": "open_live_processing_js",
+	"selector": "source.pde"
 }

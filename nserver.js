@@ -4,7 +4,7 @@ var server = ws.createServer({server:"http.Server"});
 
 server.addListener("connection", function(connection){
   connection.addListener("message", function(msg){
-    server.send(msg);
+	server.send(msg);
   });
 });
 
@@ -14,57 +14,59 @@ var WebSocketServer = require('C:\\Users\\GDur\\node_modules\\websocket').server
 var webSocketsServerPort = 9999;
 var http = require('http');
 // list of currently connected clients (users)
-var clients = [ ];
+var clients = [];
 
 var server = http.createServer(function(request, response) {
-    // process HTTP request. Since we're writing just WebSockets server
-    // we don't have to implement anything.
+	// process HTTP request. Since we're writing just WebSockets server
+	// we don't have to implement anything.
 });
 
 server.listen(webSocketsServerPort, function() {
-    console.log((new Date()) + " Server is listening on port " + webSocketsServerPort);
+	console.log((new Date()) + " Server is listening on port " + webSocketsServerPort);
 });
 
 // create the server
 wsServer = new WebSocketServer({
-    httpServer: server
+	httpServer: server
 });
 
 // WebSocket server
 wsServer.on('request', function(request) {
-    console.log((new Date()) + ' Connection from origin ' + request.origin + '.');
-    var connection = request.accept(null, request.origin);
+	console.log((new Date()) + ' Connection from origin ' + request.origin + '.');
+	var connection = request.accept(null, request.origin);
 
-    var index = clients.push(connection) - 1;
-    // This is the most important callback for us, we'll handle
-    // all messages from users here.
-    connection.on('message', function(message) {
-    	console.log("Message:");
-        if (message.type === 'utf8') {
-    		console.log(message.utf8Data);
-            // process WebSocket message
-          for (var i=0; i < clients.length; i++) {
-            clients[i].sendUTF(message.utf8Data);
-          }
-        }
-    });
+	var index = clients.push(connection) - 1;
 
-    connection.on('close', function(connection) {
-        // close user connection
-    });
+	connection.on('message', function(message) {
+		console.log("Message:");
+		if (message.type === 'utf8') {
+			console.log(message.utf8Data);
+
+			if(message.utf8Data === "{close}")
+				wsServer.close();
+
+			for (var i=0; i < clients.length; i++) {
+				clients[i].sendUTF(message.utf8Data);
+			}
+		}
+	});
+
+	connection.on('close', function(connection) {
+		// close user connection
+	});
 });
 
 /*var net = require('net');
 var clients = [];
 
 net.createServer(function (stream) {
-    stream.setEncoding('utf8');
-    stream.on('data', function (data) {
-        // HERE SHOULD BE WS BROADCAST
-        for(var i = 0; i < clients.length; i++)
-            clients[i].json.send("dd");
-        console.log(data);
-    });
+	stream.setEncoding('utf8');
+	stream.on('data', function (data) {
+		// HERE SHOULD BE WS BROADCAST
+		for(var i = 0; i < clients.length; i++)
+			clients[i].json.send("dd");
+		console.log(data);
+	});
 }).listen(9999);
 
 

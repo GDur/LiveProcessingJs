@@ -5,7 +5,6 @@
   v2 theSize = new v2(800, 600);
   v2 sizeh = theSize.md(0.5);
 
-
   // Aufgabe 2. diese koordinate wird der neue nullpunkt
   v2 mp = new v2(400, 300);
 
@@ -113,7 +112,7 @@
     // y-achse um
     translate(mp.x, mp.y);
     scale(1.0f, -1.0f);
-    background(128);
+    background(18);
 
 
     // Aufgabe 1. draw cross

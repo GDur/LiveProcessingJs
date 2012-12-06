@@ -1,4 +1,4 @@
-/* Gregor Altstädt
+/* Gregor AltstÃ¤dt
  * 11.10.12*/
 
 void setup() {
@@ -8,7 +8,13 @@ void setup() {
   noLoop();
 }
 
+void bla(derp)
+{
+  print("JOAOASDA");
+}
+
 void draw() {
+  bla(3);
   background(255);
   fill(200);
 
@@ -20,11 +26,11 @@ void draw() {
   line(10, 90, 160, 105);
   ellipse(200, 200, 40, 40);
   triangle(30, 75, 58, 20, 86, 75);
-  rect(100, 100, 30, 60);
+  rect(100, 100, 20, 60);
 
 
   // println("4. Aufgabe");
-  // Steht auf Bildschirm. Dient für Benutzer der Software.
+  // Steht auf Bildschirm. Dient fÃ¼r Benutzer der Software.
   text("Mein erstes Programm", 100, 30, 110, 110);
 
   // Steht in der Console. Dient dem entwickler.
