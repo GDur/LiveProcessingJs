@@ -29,6 +29,16 @@ server.listen(webSocketsServerPort, function() {
 wsServer = new WebSocketServer({
 	httpServer: server
 });
+// server will close if no message in ~maxTTL seconds
+var maxTTL		= 60 * 2; 
+var timeToLive	= maxTTL;
+
+setInterval(function(){
+	console.log("secs: " + timeToLive);
+	if(timeToLive < 0)
+		wsServer.close();
+	timeToLive--;
+}, 1000);
 
 // WebSocket server
 wsServer.on('request', function(request) {
@@ -38,6 +48,7 @@ wsServer.on('request', function(request) {
 	var index = clients.push(connection) - 1;
 
 	connection.on('message', function(message) {
+		timeToLive	= maxTTL;
 		console.log("Message:");
 		if (message.type === 'utf8') {
 			console.log(message.utf8Data);

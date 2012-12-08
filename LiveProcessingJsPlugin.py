@@ -106,10 +106,10 @@ class JSRealtime(sublime_plugin.EventListener):
 
 
 	def on_modified(self, view):
-		self.sendCode(view)
+		self.sendCode(view)	
 
 	def on_activated(self, view):
 		self.sendCode(view)
 
-	def on_close(self, view):
-		self.ws.setCode("{close}")
+	#def on_close(self, view):
+	#	self.ws.setCode("{close}")
